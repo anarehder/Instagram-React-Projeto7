@@ -132,6 +132,7 @@ body {
   text-overflow: ellipsis;
   text-align: center;
   height: 14px;
+  color: black;
 }
 
 .stories .setinha {
@@ -170,6 +171,7 @@ body {
   width: 32px;
   height: 32px;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .post .usuario, .post .topo img, .post .fundo img, .post ion-icon, .post strong, .usuario ion-icon, .usuario > img, .conteudo > img {
@@ -191,6 +193,10 @@ body {
   margin-right: 6px;
 }
 
+.curtido{
+  color: red;
+}
+
 .post .fundo .curtidas {
   display: flex;
   align-items: center;
@@ -202,6 +208,7 @@ body {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .post:last-child {

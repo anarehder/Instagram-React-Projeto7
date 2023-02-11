@@ -1,81 +1,23 @@
+import StoriePorUsuario from "./StoriePorUsuario";
+
 export default function Stories() {
-    return (
-        <div class="stories">
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/9gag.svg" alt="9gag"/>
-            </div>
-            <div class="usuario">
-              9gag
-            </div>
-          </div>
+  const dadosStories = [
+    { imagemUsr: "assets/img/lulufofinha.jpeg", nomeUsr:"lulufofinha" },
+    { imagemUsr: "assets/img/escoladacrianca.jpg", nomeUsr:"escoladacrianca" },
+    { imagemUsr: "assets/img/bebe_tinta.jpg", nomeUsr:"bebedivertido" },
+    { imagemUsr: "assets/img/bebe_tinta_2.jpg", nomeUsr:"criancaquebrinca" },
+    { imagemUsr: "assets/img/natacao.jpg", nomeUsr:"natacaoinfantil" },
+    { imagemUsr: "assets/img/montessori.png", nomeUsr:"montessoribebes" },
+    { imagemUsr: "assets/img/banho.jpg", nomeUsr:"horadobanho" },
+    { imagemUsr: "assets/img/parque.jpg", nomeUsr:"parquinholegal" }
+  ];
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/meowed.svg" alt="meowed"/>
-            </div>
-            <div class="usuario">
-              meowed
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/barked.svg" alt="barked"/>
-            </div>
-            <div class="usuario">
-              barked
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/nathanwpylestrangeplanet.svg" alt="nathanwpylestrangeplanet"/>
-            </div>
-            <div class="usuario">
-              nathanwpylestrangeplanet
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/wawawicomics.svg" alt="wawawicomics"/>
-            </div>
-            <div class="usuario">
-              wawawicomics
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/respondeai.svg" alt="respondeai"/>
-            </div>
-            <div class="usuario">
-              respondeai
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/filomoderna.svg" alt="filomoderna"/>
-            </div>
-            <div class="usuario">
-              filomoderna
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/memeriagourmet.svg" alt="memeriagourmet"/>
-            </div>
-            <div class="usuario">
-              memeriagourmet
-            </div>
-          </div>
-
-          <div class="setinha">
-            <ion-icon name="chevron-forward-circle"></ion-icon>
-          </div>
-        </div>
-    )
+  return ( 
+    <div className="stories">
+      {dadosStories.map((stories) => <StoriePorUsuario key={stories.nomeUsr} imagemUsr={stories.imagemUsr} nomeUsr={stories.nomeUsr}/>)}
+      <div className="setinha">
+          <ion-icon name="chevron-forward-circle"></ion-icon>
+      </div>
+    </div>
+  );
 }
