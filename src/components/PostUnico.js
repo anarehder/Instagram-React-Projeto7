@@ -22,12 +22,11 @@ export default function PostUnico(props){
             setCorCoracao("curtido");
             totalCurtidas = Number(quantCurtidas.replace(".","")) + 1;
             setQuantCurtidas(totalCurtidas.toLocaleString('pt-BR'));
-            
         } else{
             setCorCoracao("null");
             totalCurtidas = Number(quantCurtidas.replace(".","")) - 1;
             setQuantCurtidas(totalCurtidas.toLocaleString('pt-BR'));
-        }  
+        }
     }
 
     function curtirImg(){
