@@ -1,6 +1,6 @@
 import AlteraNomeFoto from "./AlteraNomeFoto";
 
-export default function Usuario(props) {
+export default function Usuario() {
   const nomeUsuarioInicial = "davi.rehder";
   const fotoUsuarioInicial = "assets/img/davi.jpg";
 

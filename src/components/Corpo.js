@@ -11,5 +11,5 @@ export default function Corpo() {
             </div>
             <SideBar />
         </div>
-    )
+    );
 }

@@ -1,27 +1,29 @@
 import { useState } from "react";
 
 export default function PostUnico(props){
-    
-    const [salvarPost, setSalvarPost] = useState("bookmark-outline");
+    const coracaoCurtido = "heart";
+    const coracaoVazio = "heart-outline";
+    const tagSalvo = "bookmark";
+    const tagVazio = "bookmark-outline";
+    const [salvarPost, setSalvarPost] = useState(tagVazio);
     const [corCoracao, setCorCoracao] = useState("null");
-    const [postCurtido, setPostCurtido] = useState("heart-outline");
+    const [postCurtido, setPostCurtido] = useState(coracaoVazio);
     const [quantCurtidas, setQuantCurtidas]= useState(props.qntdCurtidas);
 
     function salvar() {
-        setSalvarPost(salvarPost === "bookmark-outline" ? "bookmark" : "bookmark-outline");
+        setSalvarPost(salvarPost === tagVazio ? tagSalvo : tagVazio);
     }
 
     let totalCurtidas = Number(props.qntdCurtidas.replace(".",""));
 
     function curtir() {
-        setPostCurtido(postCurtido === "heart-outline" ? "heart" : "heart-outline");
-        if(postCurtido === "heart-outline"){
+        setPostCurtido(postCurtido === coracaoVazio ? coracaoCurtido : coracaoVazio);
+        if(postCurtido === coracaoVazio){
             setCorCoracao("curtido");
             totalCurtidas = Number(quantCurtidas.replace(".","")) + 1;
             setQuantCurtidas(totalCurtidas.toLocaleString('pt-BR'));
             
-        }
-        else{
+        } else{
             setCorCoracao("null");
             totalCurtidas = Number(quantCurtidas.replace(".","")) - 1;
             setQuantCurtidas(totalCurtidas.toLocaleString('pt-BR'));
@@ -29,14 +31,14 @@ export default function PostUnico(props){
     }
 
     function curtirImg(){
-        if(postCurtido === "heart-outline"){
-            setPostCurtido("heart");
+        if(postCurtido === coracaoVazio){
+            setPostCurtido(coracaoCurtido);
             setCorCoracao("curtido");
             totalCurtidas = Number(quantCurtidas.replace(".","")) + 1;
             setQuantCurtidas(totalCurtidas.toLocaleString('pt-BR'));
         }
     }
-   
+
     return (
         <div className="post" data-test="post">
         <div className="topo">

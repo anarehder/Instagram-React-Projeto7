@@ -1,9 +1,9 @@
-import Usuario from './Usuario'
-import Sugestoes from './Sugestoes'
+import Usuario from './Usuario';
+import Sugestoes from './Sugestoes';
 
 export default function SideBar() {
     return (
-        <div className="sidebar">        
+        <div className="sidebar">
 			<Usuario />
 			<Sugestoes />
             <div className="links">
@@ -14,5 +14,5 @@ export default function SideBar() {
                 © 2021 INSTAGRAM DO FACEBOOK
             </div>
 		</div>
-    )
+    );
 }

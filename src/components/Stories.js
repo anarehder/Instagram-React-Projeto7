@@ -12,7 +12,7 @@ export default function Stories() {
     { imagemUsr: "assets/img/parque.jpg", nomeUsr:"parquinholegal" }
   ];
 
-  return ( 
+  return (
     <div className="stories">
       {dadosStories.map((stories) => <StoriePorUsuario key={stories.nomeUsr} imagemUsr={stories.imagemUsr} nomeUsr={stories.nomeUsr}/>)}
       <div className="setinha">
