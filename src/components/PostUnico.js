@@ -38,7 +38,7 @@ export default function PostUnico(props){
     }
    
     return (
-        <div className="post">
+        <div className="post" data-test="post">
         <div className="topo">
         <div className="usuario">
             <img src={props.imagemUsr} alt={props.nomeUsr}/>
@@ -50,7 +50,7 @@ export default function PostUnico(props){
         </div>
 
         <div className="conteudo">
-        <img src={props.imgPost} alt={props.altPost} onClick={curtirImg}/>
+        <img src={props.imgPost} alt={props.altPost} onClick={curtirImg} data-test="post-image"/>
         </div>
 
         <div className="fundo">
@@ -61,14 +61,14 @@ export default function PostUnico(props){
             <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
         <div>
-            <ion-icon onClick={salvar} name={salvarPost}></ion-icon>
+            <ion-icon onClick={salvar} name={salvarPost} data-test="save-post"></ion-icon>
         </div>
         </div>
 
         <div className="curtidas">
         <img src={props.imgCurtida} alt={props.nomePrimeiraCurtida}/>
             <div className="texto">
-            Curtido por <strong>{props.nomePrimeiraCurtida}</strong> e <strong>outras {quantCurtidas} pessoas</strong>
+            Curtido por <strong>{props.nomePrimeiraCurtida}</strong> e <strong data-test="likes-number">outras {quantCurtidas} pessoas</strong>
             </div>
         </div>
         </div>

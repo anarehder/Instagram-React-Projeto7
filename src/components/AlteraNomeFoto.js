@@ -20,11 +20,11 @@ export default function AlteraNomeFoto (props) {
   
       return (
           <div className="usuario">
-            <img src={fotoUsuario} alt="imagem de perfil" onClick={alteraFoto}/>
+            <img src={fotoUsuario} alt="imagem de perfil" onClick={alteraFoto} data-test="profile-image"/>
             <div className="texto">
               <span>
-                <strong>{nomeUsuario}</strong>
-                <ion-icon name="pencil" onClick={alteraNome} ></ion-icon>
+                <strong data-test="name">{nomeUsuario}</strong>
+                <ion-icon name="pencil" onClick={alteraNome} data-test="edit-name"></ion-icon>
               </span>
             </div>
           </div>
